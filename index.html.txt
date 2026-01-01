@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>A Little Surprise 🎁</title>
+<style>
+  body {
+    margin: 0;
+    height: 100vh;
+    background: linear-gradient(135deg, #ffdde1, #ee9ca7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Arial', sans-serif;
+  }
+
+  .container {
+    text-align: center;
+  }
+
+  .gift {
+    font-size: 110px;
+    cursor: pointer;
+    animation: bounce 1.5s infinite;
+  }
+
+  @keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px); }
+  }
+
+  .message {
+    display: none;
+    font-size: 36px;
+    color: #fff;
+    font-weight: bold;
+    animation: fadeIn 1.2s ease-in-out;
+  }
+
+  .date {
+    font-size: 44px;
+    color: #fff700;
+    margin-top: 10px;
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.9); }
+    to { opacity: 1; transform: scale(1); }
+  }
+
+  .hint {
+    margin-top: 15px;
+    color: #fff;
+    font-size: 18px;
+    opacity: 0.9;
+  }
+</style>
+</head>
+<body>
+
+<div class="container">
+  <div id="gift" class="gift">🎁</div>
+  <div id="message" class="message">
+    💖 A Special Date 💖
+    <div class="date">10 August 2025</div>
+  </div>
+  <div id="hint" class="hint">Tap the gift 🎁</div>
+</div>
+
+<script>
+  document.getElementById("gift").onclick = function() {
+    document.getElementById("gift").style.display = "none";
+    document.getElementById("hint").style.display = "none";
+    document.getElementById("message").style.display = "block";
+  };
+</script>
+
+</body>
+</html>
